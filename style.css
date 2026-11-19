@@ -1,0 +1,84 @@
+
+html {
+    box-sizing: border-box;
+    background-image: url(num.gif);
+}
+    
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+    
+* {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
+.slackey-regular {
+  font-family: "Slackey", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ------------------------------------------- */
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* vh means viewport height */
+}
+
+.content, #content {
+    border: solid;
+    border-color: red;
+    margin: 0% 3%;
+    height: auto;
+    text-align: center;
+}
+
+#title {
+    border: solid;
+    height: 24%;
+}
+
+#submission {
+    border: solid;
+    height: 21%;
+    padding-top: 2%;
+}
+
+#hint {
+    border: solid;
+    height: 5%;
+}
+
+#guess {
+    border: solid;
+    height: 50%;
+    padding-top: 1%;
+}
+
+
+/* ------------------------------------------- */
+
+h1 {
+    font-size: 130px;
+    font-family: Slackey;
+}
+
+input {
+    width: 40%;
+    height: 10vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+#submission button {
+    height: 9vh;
+    width: 10%;
+    font-size: 4vh;
+}
+
+#hint .content {
+    font-size: 150%;
+}
+
