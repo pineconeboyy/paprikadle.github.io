@@ -7,7 +7,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
 
         <link href="style.css" rel="stylesheet" type="text/css" media="all">
-        <script src = "script.js"></script>
+        <script src = "script.js" type ="module">
+            import {buttonPush} from "./script.js";
+        </script>
 
         <title>
             hello world
@@ -28,7 +30,7 @@
             <div id = "submission">
                 <div class = "content">
                     <input id = "tb" type = "text">
-                    <button id = "guessub" onclick="guessSubmit()"> ❥ </button>
+                    <button id = "guessub" onclick = "buttonPush()"> ❥ </button>
                 </div>
             </div>
 
@@ -40,11 +42,24 @@
 
             <div id = "guess">
                 <div id = "content">
-                    
+                    <table id = "guesshead">
+                        <tr>
+                            <th class = "theader"> Name </th>
+                            <th class = "theader"> Gender </th>
+                            <th class = "theader"> Race </th>
+                            <th class = "theader"> Age </th>
+                            <th class = "theader"> Species </th>
+                            <th class = "theader"> Job </th>
+                        </tr>
+                        <div id = "guessplace">
+                        <table id = "guesstrack"></table>
+                        </div>
+                    </table>
                 </div>
             </div>
 
         </div>
+
 
     </body>
 

@@ -1,3 +1,8 @@
+/* failed code ignore but also reference
+1. turn charlist into object array
+2. adjust guessSubmit() + write code to store every value to compare against
+3. rewrite guessComp()
+4. rewrite guessDisplay()
 
 const charlist = [
 ["Iridia Forrest", "Nonbinary", "Asian", "21 - 30", "Angel", "Government/Law Enforcement"],
@@ -56,6 +61,9 @@ function guessDisplay() {
         for (let l = 0; l < charlist.length + 1; l++) {
             let column = document.createElement('div');
                 column.style.border = 'solid';
+            if (guesscount > 0) {
+                column.innerHTML = '';
+            }
             column.innerHTML = guesslist[f][l];
             //console.log(guesslist[f][l]);
             row.appendChild(column);
@@ -63,6 +71,16 @@ function guessDisplay() {
             
         }
         guesses.appendChild(row);
-        //column.innerHTML = '';
     }
+}
+*/
+import {GuessWork} from "./guess.js";
+
+let guesser = new GuessWork ("Attempt");
+guesser.randomIndex();
+guesser.answerPick();
+
+window['onload'] = function() {
+    let button = document.getElementById('guessub');
+    button['onclick'] = function() { guesser.guessSubmit() };
 }

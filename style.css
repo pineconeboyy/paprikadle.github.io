@@ -31,9 +31,10 @@ html {
     border: solid;
     border-color: red;
     margin: 0% 3%;
-    height: auto;
+    height: 100%;
     text-align: center;
 }
+
 
 #title {
     border: solid;
@@ -81,4 +82,19 @@ input {
 #hint .content {
     font-size: 150%;
 }
+
+#guesshead {
+    width: 100%;
+    display: sticky;
+}
+
+#guesstrack {
+    width: 100%;
+}
+
+th, td {
+    width: 20vh;
+    height: 5vh;
+}
+
 
