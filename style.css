@@ -81,6 +81,8 @@ input {
 
 #hint .content {
     font-size: 150%;
+    display: flex;
+    justify-content: space-between;
 }
 
 #guesshead {

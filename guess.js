@@ -179,6 +179,7 @@ export class GuessWork {
     greenCount = 0;
     guesscount = 0;
     invalid = 0;
+    wincheck = false;
     typeGuess;
     pie;
 
@@ -272,6 +273,7 @@ export class GuessWork {
         
         if (this.tempname == this.ansname) {
             alert("woahhh omg you won holy shit");
+            this.winSeq();
         }
         console.log("green: ", this.greenCount);
         console.log(this.cellStore);
@@ -302,4 +304,10 @@ export class GuessWork {
         spec.innerHTML = this.tempspec;
         job.innerHTML = this.tempjob;
     }
+
+    winSeq() {
+        document.getElementById("tb").disabled = true;
+    }
 }
+
+   
