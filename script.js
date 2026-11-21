@@ -83,4 +83,11 @@ guesser.answerPick();
 window['onload'] = function() {
     let button = document.getElementById('guessub');
     button['onclick'] = function() { guesser.guessSubmit() };
+
+    let text = document.getElementById('tb');
+    text.addEventListener("keydown", (e) => {
+        if (e.key == "Enter") {
+            guesser.guessSubmit();
+        }
+    });
 }

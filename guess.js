@@ -219,7 +219,7 @@ export class GuessWork {
             console.log("guessSubmit has run");
         this.typeGuess = document.getElementById('tb').value;
         document.getElementById('tb').value = "";
-            this.guesscount ++;
+        this.guesscount ++;
             this.guessReg(this.typeGuess);
             this.guessComp();
         if (this.invalid != this.charlist.length) { //checking to see if input is valid before displaying
@@ -236,7 +236,7 @@ export class GuessWork {
 
     guessReg(guess) { //iterates through array + sets temp vars
         for (let x = 0; x < this.charlist.length; x++) {
-            if ((this.charlist[x].charName.toString()).includes(guess)) {
+            if ((this.charlist[x].charName.toString().toLowerCase()).includes(guess.toLowerCase())) {
                 this.tempname = this.charlist[x].charName;
                 this.tempgen = this.charlist[x].charGender;
                 this.temprace = this.charlist[x].charRace;
@@ -265,6 +265,7 @@ export class GuessWork {
 
         for (let g = 0; g < anslist.length; g++) {
             if (guesslist[g] == anslist[g]) { //if the guess list and ans list element are equal
+                console.log(typeof guesslist[g]);
                 this.cellStore.push(g); //add index number to cellStore
                 this.greenCount ++;
                 console.log("this if statement works");
@@ -272,7 +273,7 @@ export class GuessWork {
         }
         
         if (this.tempname == this.ansname) {
-            alert("woahhh omg you won holy shit");
+            alert("woahhh omg you won holy moly");
             this.winSeq();
         }
         console.log("green: ", this.greenCount);
@@ -294,7 +295,7 @@ export class GuessWork {
         //pick cells w for loop and cell array
         for (let c = 0; c < this.cellStore.length; c++){
            let close = document.getElementById("guesstrack").rows[0].cells.item(this.cellStore[c]);
-           close.style.backgroundColor = 'green';
+           close.style.backgroundColor = "rgb(92, 106, 9)";
         }
 
         nme.innerHTML = this.tempname;
